@@ -53,21 +53,16 @@ export function WaterSlider() {
           draggable={false}
           className="absolute inset-0 size-full object-cover"
         />
-        <div
-          className="absolute inset-y-0 left-0 overflow-hidden"
-          style={{ width: `${pos}%` }}
-        >
-          <img
-            src={antes.url}
-            alt="Vaso con agua con apariencia turbia antes del tratamiento"
-            width={1200}
-            height={1200}
-            loading="lazy"
-            draggable={false}
-            className="absolute inset-0 h-full object-cover"
-            style={{ width: ref.current?.offsetWidth ?? "100%" }}
-          />
-        </div>
+        <img
+          src={antes.url}
+          alt="Vaso con agua con apariencia turbia antes del tratamiento"
+          width={1200}
+          height={1200}
+          loading="lazy"
+          draggable={false}
+          className="absolute inset-0 size-full object-cover"
+          style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+        />
 
         <span className="absolute left-4 top-4 rounded-full bg-ocean-deep/80 px-3 py-1 text-[0.7rem] font-bold tracking-[0.18em] text-primary-foreground backdrop-blur">
           ANTES
