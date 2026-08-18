@@ -37,7 +37,7 @@ export function Header() {
             alt="Nova Home Services"
             width={816}
             height={737}
-            className="h-14 w-auto sm:h-16 lg:h-20"
+            className="h-16 w-auto sm:h-20 lg:h-24"
           />
         </a>
 
